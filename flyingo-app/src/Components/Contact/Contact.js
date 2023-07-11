@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../App.css'
+import '../Css/Booking.css'
 
 function Contact() {
   return (

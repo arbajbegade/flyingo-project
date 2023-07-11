@@ -1,8 +1,10 @@
 import React from 'react'
+import '../../App.css'
+import '../Css/Booking.css'
 
 function Offer() {
   return (
-    <div>This are Offers</div>
+    <div className='font1'>This are Offers</div>
   )
 }
 

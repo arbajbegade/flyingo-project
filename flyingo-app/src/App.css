@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Kalam&family=Varela+Round&family=Ysabeau+SC&display=swap');
+
+.font1{
+    font-family: 'Ysabeau SC', sans-serif;
+}
+.font2{
+    font-family: 'Cinzel', serif;
+}
+.font3{
+    font-family: 'Kalam', cursive;
+}
+.font4{
+    font-family: 'Varela Round', sans-serif;
+}
+
+.textcolor{
+    color: #7e1b4e;
+}
