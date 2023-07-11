@@ -4,7 +4,7 @@ import '../Css/Booking.css'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div>Welcome </div>
   )
 }
 
