@@ -5,3 +5,9 @@
 .bgcolor{
     background-color: #801c50;
 }
+
+.effect:hover{
+    color: #6e1945;
+    transition: 0.3s ease-out;
+    box-shadow: 5px 5px 15px #888888;
+}
