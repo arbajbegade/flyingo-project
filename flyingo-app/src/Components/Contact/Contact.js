@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../App.css'
-import '../Css/Booking.css'
+import '../Css/Contact.css'
 
 function Contact() {
   return (
