@@ -1,4 +1,5 @@
 import React from 'react'
+import FlightStatus from './FlightStatus'
 
 function Book() {
   return (
@@ -20,10 +21,7 @@ function Book() {
           <label htmlFor="">Return</label>
           <input type="date" className=' focus:outline-none' placeholder='Airport' />
         </div>
-        <div className='flex flex-col border-2 px-5 rounded-e-lg py-2'>
-          <label htmlFor="">Travellers & Cabin Class </label>
-          <a href="">1 Adult, Economy</a>
-        </div>
+        <FlightStatus></FlightStatus>
       </div>
     </div>
   )
