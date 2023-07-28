@@ -32,7 +32,7 @@ function FlightStatus() {
     
 
   return (
-    <div className='relative border-2 rounded-e-lg py-2'>
+    <div className='relative border-2 rounded-e-lg py-2 hover:border-gray-400'>
           <label className='mx-5'>Travellers & Cabin Class </label>
           <div className='mx-5 mt-1 cursor-pointer' onClick={handlePassenger}>{passenger} Passenger, {passengerClass} </div>
             { passengerDetails && 
