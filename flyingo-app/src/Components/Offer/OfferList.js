@@ -3,21 +3,25 @@ import OfferItem from './OfferItem'
 
 const img =[
     {
+      id:1,
       img: 'Images/brazil.jpg',
       country: 'BRAZIL',
       city: 'Rio de Janeiro'
     },
     {
+      id:2,
       img: 'Images/dubai.jpg',
       country: 'UNITED ARAB EMIRATES',
       city: 'Dubai'
     },
     {
+      id:3,
       img: 'Images/canada.jpg',
       country: 'CANADA',
       city: 'Victoria'
     },
     {
+      id:4,
       img: 'Images/berlin.jpg',
       country: 'GERMANY',
       city: 'Berlin'
@@ -28,7 +32,7 @@ const img =[
 function OfferList() {
   
   const list = img.map((l)=>(
-    <OfferItem img={l.img} country={l.country} city={l.city} />
+    <OfferItem key={l.id} img={l.img} country={l.country} city={l.city} />
   ))
 
 
