@@ -12,9 +12,12 @@ function App() {
       <RoutNavbar/>
       {/* <Navbar></Navbar>
       <Booking></Booking>
+      
       <Offer></Offer>
       <Contact></Contact>
       <Footer></Footer> */}
+
+      
     </div>
   );
 }

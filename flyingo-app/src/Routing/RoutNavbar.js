@@ -14,6 +14,7 @@ function RoutNavbar() {
         <Routes>
             <Route path='/' element={ <Nav/> } >
               <Route index element={ <div> <Offer/> <Contact/> <Footer/> </div> } />
+              
               <Route path='/explore' element={<Explore/>} />
               <Route path='/cargo' element={<Cargo/>} />
             </Route>
