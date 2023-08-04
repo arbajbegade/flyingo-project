@@ -6,6 +6,7 @@ import Nav from './Nav'
 import Footer from '../Components/Footer/Footer'
 import Explore from './Explore/Explore'
 import Cargo from './Cargo/Cargo'
+import BookNow from './FastBook/BookNow'
 
 function RoutNavbar() {
   return (
@@ -15,8 +16,8 @@ function RoutNavbar() {
               <Route index element={ <div> <Offer/> <Contact/> <Footer/> </div> } />
               <Route path='/explore' element={<Explore/>} />
               <Route path='/cargo' element={<Cargo/>} />
-
             </Route>
+            <Route path='/booknow' element={ <BookNow/> } />
         </Routes>
     </BrowserRouter>
   )
