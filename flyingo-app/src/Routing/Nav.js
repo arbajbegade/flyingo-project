@@ -9,7 +9,6 @@ function Main() {
     <div>
       <Navbar/>
       <Booking/>
-        
       <Outlet/>
     </div>
   )

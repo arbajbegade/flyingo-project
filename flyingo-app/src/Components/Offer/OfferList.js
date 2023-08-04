@@ -4,25 +4,25 @@ import OfferItem from './OfferItem'
 const img =[
     {
       id:1,
-      img: 'Images/brazil.jpg',
+      img: 'Image/brazil.jpg',
       country: 'BRAZIL',
       city: 'Rio de Janeiro'
     },
     {
       id:2,
-      img: 'Images/dubai.jpg',
+      img: 'Image/dubai.jpg',
       country: 'UNITED ARAB EMIRATES',
       city: 'Dubai'
     },
     {
       id:3,
-      img: 'Images/canada.jpg',
+      img: 'Image/canada.jpg',
       country: 'CANADA',
       city: 'Victoria'
     },
     {
       id:4,
-      img: 'Images/berlin.jpg',
+      img: 'Image/berlin.jpg',
       country: 'GERMANY',
       city: 'Berlin'
     },

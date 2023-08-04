@@ -2,11 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import locations from "./card";
 
+
 function DestinationDetails() {
   const { id } = useParams(); // Get the item id from the URL params
   const location = locations.find((l) => l.id == id);
-//   console.log(location);
-//   console.log(location.image);
+  console.log(location);
+  console.log(location.id);
 
   return (
     <>

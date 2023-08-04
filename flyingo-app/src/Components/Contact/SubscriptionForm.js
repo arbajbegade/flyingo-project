@@ -24,7 +24,7 @@ export default function SubscriptionForm() {
         </div>
 
         <div className="flex items-center ml-4">
-          <label for="email" className="flex-none font-medium mr-2"> Email:</label>
+          <label htmlFor="email" className="flex-none font-medium mr-2"> Email:</label>
           <input type="email" id="email" name="email" value={email} onChange={handleEmailChange}
             className="flex-grow px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
             placeholder="Enter your email address"/>

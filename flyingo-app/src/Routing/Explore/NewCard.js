@@ -1,5 +1,4 @@
 function NewCard({ imageUrl, title }) {
-    console.log(imageUrl)
     return (
       <>
         <div className="card bg-white w-[200px] h-[250px] m-2 rounded-lg shadow-lg">
