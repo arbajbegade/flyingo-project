@@ -9,7 +9,7 @@ const fromCities = [
   { id: 6, city: 'Berlin' },
 ];
 
-function From() {
+function From({onTo}) {
   const [showFrom, setShowFrom] = useState(false);
   const [cityName, setCityName] = useState('Select Airport');
 
@@ -20,7 +20,10 @@ function From() {
   const handleChange = (e) => {
     const selectedCity = e.target.textContent;
     setCityName(selectedCity);
+    onTo(cityName) 
   };
+
+
 
   return (
     <div className='relative border-2 px-5 py-2 w-52 hover:border-gray-400' onClick={handleShowFrom}>

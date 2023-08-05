@@ -15,6 +15,7 @@ function RoutNavbar() {
     <BrowserRouter>
         <Routes>
             <Route path='/' element={ <Nav/> } >
+<<<<<<< Updated upstream
               <Route index element={ <div> 
                 <Offer/> 
                 <Carousel/> 
@@ -23,6 +24,10 @@ function RoutNavbar() {
                 </div> } />
               {/* <Route path='/explore' element={<Explore/>} /> */}
               <Route path="/destination/:id" element={<DestinationDetails />} />
+=======
+              <Route index element={ <div> <Offer/> <Contact/> <Footer/> </div> } />
+              <Route path='/explore' element={<Explore/>} />
+>>>>>>> Stashed changes
               <Route path='/cargo' element={<Cargo/>} />
             </Route>
             <Route path='/booknow' element={ <BookNow/> } />

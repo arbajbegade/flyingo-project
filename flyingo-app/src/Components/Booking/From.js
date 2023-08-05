@@ -9,7 +9,7 @@ const fromCities = [
   { id: 6, city: 'Bengaluru' },
 ];
 
-function From() {
+function From( {onFrom} ) {
   const [showFrom, setShowFrom] = useState(false);
   const [cityName, setCityName] = useState('Mumbai');
 
@@ -20,6 +20,7 @@ function From() {
   const handleChange = (e) => {
     const selectedCity = e.target.textContent;
     setCityName(selectedCity);
+    onFrom(cityName)
   };
 
   return (
