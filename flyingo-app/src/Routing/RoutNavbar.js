@@ -15,7 +15,6 @@ function RoutNavbar() {
     <BrowserRouter>
         <Routes>
             <Route path='/' element={ <Nav/> } >
-<<<<<<< Updated upstream
               <Route index element={ <div> <Offer/> <Carousel/> <Contact/> <Footer/> </div> } />
               <Route path="/destination/:id" element={<DestinationDetails />} />
               <Route path='/cargo' element={<Cargo/>} />
