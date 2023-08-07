@@ -1,4 +1,4 @@
-const locations = [
+const offers = [
   {
     id: 1,
     image: "images/oneoffer.png",
@@ -31,4 +31,4 @@ const locations = [
   },
 ];
 
-export default locations;
+export default offers;
