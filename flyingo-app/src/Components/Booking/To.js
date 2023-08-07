@@ -20,7 +20,7 @@ function From({onTo}) {
   const handleChange = (e) => {
     const selectedCity = e.target.textContent;
     setCityName(selectedCity);
-    onTo(cityName) 
+    onTo(selectedCity) 
   };
 
 

@@ -3,14 +3,7 @@ import React from "react";
 function NavItems() {
   // const list2 = ["Country", "Search", "Help", "LogIn"];
   const list2 = [
-    {
-      id:1,
-      name:"Country"
-    },
-    {
-      id:2,
-      name:"Search"
-    },
+    
     {
       id:3,
       name:"Help"

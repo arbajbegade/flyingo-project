@@ -11,16 +11,18 @@ const fromCities = [
 
 function From( {onFrom} ) {
   const [showFrom, setShowFrom] = useState(false);
-  const [cityName, setCityName] = useState('Mumbai');
+  const [cityName, setCityName] = useState('Select City');
 
   const handleShowFrom = () => {
     setShowFrom(!showFrom);
   };
-
+  
   const handleChange = (e) => {
     const selectedCity = e.target.textContent;
+    console.log(selectedCity)
     setCityName(selectedCity);
-    onFrom(cityName)
+    console.log(cityName)
+    onFrom(selectedCity)
   };
 
   return (

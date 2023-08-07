@@ -18,7 +18,7 @@ function Booking() {
             <div className='flex items-center space-x-1'> <IoLocationOutline size={'1.4rem'} /><label>Flight Status</label></div>
         </div>
         <div className='h-48 flex flex-col justify-center bg-white pt-2'>
-          <Book></Book>
+          <Book ></Book>
           <BookBtn btnname="Show Flights"></BookBtn>
         </div>
     </div>
