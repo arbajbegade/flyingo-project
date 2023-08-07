@@ -28,3 +28,10 @@
     box-shadow:  5px 50px 50px 5px rgb(104, 11, 48) inset;
     
   }
+  .bgfdback{
+    background: url('./Components//Pictures/flight2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:  5px 50px 50px 5px skyblue inset;
+  }

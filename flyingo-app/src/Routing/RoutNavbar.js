@@ -9,13 +9,14 @@ import BookNow from './FastBook/BookNow'
 // import Explore from './Explore/Explore'
 import Carousel from './Explore/Carousel'
 import DestinationDetails from './Explore/DestinationDetails'
+import FeedbackPage from '../Components/FeedBackAndReview/FeedbackPage'
 
 function RoutNavbar() {
   return (
     <BrowserRouter>
         <Routes>
             <Route path='/' element={ <Nav/> } >
-              <Route index element={ <div> <Offer/> <Carousel/> <Contact/> <Footer/> </div> } />
+              <Route index element={ <div> <Offer/> <Carousel/> <Contact/><FeedbackPage/> <Footer/> </div> } />
               <Route path="/destination/:id" element={<DestinationDetails />} />
               <Route path='/cargo' element={<Cargo/>} />
             </Route>
