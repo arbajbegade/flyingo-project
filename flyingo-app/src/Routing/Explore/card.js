@@ -1,52 +1,34 @@
 const locations = [
-    {
-      id: 1,
-      image: "images/greece.png",
-      title: "Greece",
-      description:
-        "Greece has the longest coastline in Europe and is the southernmost country in Europe. ",
-    },
-    {
-      id: 2,
-      image: "images/barcelona.png",
-      title: "Barcelona",
-    },
-    {
-      id: 3,
-      image: "images/madrid.png",
-      title: "Madrid",
-    },
-    {
-      id: 4,
-      image: "images/paro.png",
-      title: "Paro",
-    },
-    {
-      id: 5,
-      image: "images/sydney.png",
-      title: "Sydney",
-    },
-    {
-      id: 6,
-      image: "images/hongkong.png",
-      title: "Hongkong",
-    },
-    {
-      id: 7,
-      image: "images/lasvegas.png",
-      title: "Lasvegas",
-    },
-    {
-      id: 8,
-      image: "images/maldives.png",
-      title: "Maldives",
-    },
-    {
-      id: 9,
-      image: "images/singapore.png",
-      title: "Singapore",
-    },
-  ];
-  
-  export default locations;
-  
+  {
+    id: 1,
+    image: "images/oneoffer.png",
+    title: "Get Flat 10% Off On Flights with One Card Credit Card",
+  },
+  {
+    id: 2,
+    image: "images/saveoffer.png",
+    title: "Save Upto ₹6000 on Flights",
+  },
+  {
+    id: 3,
+    image: "images/winoffer.png",
+    title: "Win Free Flight Tickets Daily",
+  },
+  {
+    id: 4,
+    image: "images/visaoffer.png",
+    title: "Get Flat ₹500 off on Applying Visa",
+  },
+  {
+    id: 5,
+    image: "images/mivioffer.png",
+    title: "Win MIVI Products Daily",
+  },
+  {
+    id: 6,
+    image: "images/hoteloffer.png",
+    title: "Get 15% off",
+  },
+];
+
+export default locations;

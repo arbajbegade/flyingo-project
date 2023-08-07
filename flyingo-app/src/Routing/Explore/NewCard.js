@@ -1,20 +1,17 @@
 function NewCard({ imageUrl, title }) {
-    return (
-      <>
-        <div className="card bg-white w-[200px] h-[250px] m-2 rounded-lg shadow-lg">
-          <div className="">
-            <img
-              className="w-[200px] h-[200px] object-cover  p-2"
-              src={imageUrl} alt="img"
-            />
-          </div>
-  
-          <div className="justify-center items-start p-3 font-semibold text-center">
-            {title}
-          </div>
+  console.log(imageUrl);
+  return (
+    <>
+      <div className="card bg-white w-[300px] h-[250px] m-2 rounded-lg shadow-lg">
+        <div className="">
+          <img
+            className="w-[300px] h-[250px] object-cover p-2"
+            src={imageUrl}
+            alt="img"
+          />
         </div>
-      </>
-    );
-  }
-  export default NewCard;
-  
+      </div>
+    </>
+  );
+}
+export default NewCard;
