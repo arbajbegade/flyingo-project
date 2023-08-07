@@ -9,9 +9,26 @@ function OfferDetails() {
   return (
     <>
       <div>
-        <div>{offer.id}</div>
         <div>{offer.title}</div>
-        <div>{offer.description}</div>
+
+        <div>
+          <div>Highlight</div>
+          <div>
+            <span>{offer.coupon}</span>
+            <span>{offer.discount}</span>
+            <span>{offer.validity}</span>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <ul>
+              {offer.about.map((x, index) => (
+                <li key={index}>{x}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </>
   );

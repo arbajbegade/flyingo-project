@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function OfferItem({ imageUrl }) {
   return (
     <>
-      <div className="card bg-white w-[300px] h-[250px] m-2 rounded-lg shadow-lg">
+      <div className="card w-[300px] h-[250px] ml-7 mr-7 rounded-lg">
         <div className="">
           <img
-            className="w-[300px] h-[250px] object-cover p-2"
+            className="w-[300px] h-[250px]"
             src={imageUrl}
             alt="img"
           />
@@ -16,4 +16,4 @@ function OfferItem({ imageUrl }) {
   );
 }
 
-export default OfferItem
+export default OfferItem;
