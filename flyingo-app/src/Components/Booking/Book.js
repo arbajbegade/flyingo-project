@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import FlightStatus from './FlightStatus'
 import From from './From'
 import To from './To'
 
-function Book({onFrom,onTo,getValue}) {
+function Book() {
   const [showReturn,setShowReturn] = useState(true)
   const [color1,setColor1] = useState()
   const [color2,setColor2] = useState()
-  const [aa,setAa] = useState()
   const handleShowReturn = ()=>{
     setShowReturn(!showReturn)
   }
@@ -20,11 +19,6 @@ function Book({onFrom,onTo,getValue}) {
       setColor2("#7e1b4e")
     }
   }
-  const handleDate = (e)=>{
-    setAa(e.target.value)
-    getValue(aa)
-  }
-
   return (
     <div className='bg-white' >
       <div className='flex mb-2 ml-4 space-x-4'>
@@ -38,11 +32,11 @@ function Book({onFrom,onTo,getValue}) {
         </div>
       </div>
       <div className='flex px-5 justify-center space-x-1 font4'>
-        <From onFrom={onFrom} />
-        <To onTo={onTo} />
+        <From />
+        <To />
         <div className='flex flex-col border-2 px-5 py-2 hover:border-gray-400'>
           <label htmlFor="">Depart</label>
-          <input onChange={handleDate} type="date" className='pl-2 focus:outline-none' placeholder='Airport'  />
+          <input type="date" className='pl-2 focus:outline-none' placeholder='Airport'  />
         </div>
         {showReturn && (
         <div className='flex flex-col border-2 px-5 py-2 hover:border-gray-400'>
