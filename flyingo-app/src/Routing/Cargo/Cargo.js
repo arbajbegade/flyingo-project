@@ -1,8 +1,12 @@
 import React from 'react'
+import CargoPage from './CargoPage'
 
 function Cargo() {
   return (
-    <div>Cargo</div>
+    <div>
+     <CargoPage/>
+     
+      </div>
   )
 }
 
