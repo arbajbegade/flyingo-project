@@ -9,11 +9,11 @@ function OfferDetails() {
   return (
     <>
       <div>
-        <div>{offer.title}</div>
+        <div className="text-center text-3xl font-bold">{offer.title}</div>
 
         <div>
-          <div>Highlight</div>
-          <div>
+          <div className="text-center text-2xl font-bold">Highlight</div>
+          <div className="text-center">
             <span>{offer.coupon}</span>
             <span>{offer.discount}</span>
             <span>{offer.validity}</span>
