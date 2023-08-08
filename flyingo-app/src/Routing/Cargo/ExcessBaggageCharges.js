@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './Baggage.css'
+import './Baggage.css';
 const ExcessBaggageCharges = () => {
   return (
     <div className="container mx-auto p-4">

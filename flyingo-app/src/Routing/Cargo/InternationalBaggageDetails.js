@@ -1,5 +1,5 @@
 import React from 'react';
-import  './Baggage.css'
+import './Baggage.css';
 const InternationalBaggageDetails = () => {
   return (
     <div>

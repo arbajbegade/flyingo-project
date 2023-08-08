@@ -19,15 +19,15 @@
 .bgcolor{
     background-color: #7e1b4e;
 }
-/* .bgcontact{
+.bgcontact{
     
     background : url('./Components/Pictures/flight1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow:  5px 50px 50px 5px rgb(104, 11, 48) inset;
+    box-shadow:  5px 50px 50px 5px rgb(180, 183, 212) inset;
     
-  } */
+  }
   .bgfdback{
     background: url('./Components//Pictures/flight2.jpg');
     background-position: center;

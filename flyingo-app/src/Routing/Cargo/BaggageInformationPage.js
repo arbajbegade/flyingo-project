@@ -12,7 +12,7 @@ const BaggageInformationPage = () => {
 
   return (
     
-    <div className="container bgBaggageInfo mb-8 mt-8 mx-auto p-4">
+    <div className="container bgBaggageInfo mb-8 mt-8 mx-auto p-2">
       <h1 className="flex justify-center text-3xl font-bold mb-4 ">Baggage Information</h1>
 
       <div className="flex">
