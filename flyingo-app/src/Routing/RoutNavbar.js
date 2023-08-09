@@ -10,6 +10,7 @@ import FeedbackPage from '../Components/FeedBackAndReview/FeedbackPage'
 import OfferDetails from '../Components/Offer/OfferDetails'
 import Help from '../Components/Help/Help'
 import TripDetails from '../Components/Trip/TripDetails'
+import TripSection from '../Components/Trip/TripSection'
 
 
 function RoutNavbar() {
@@ -17,7 +18,7 @@ function RoutNavbar() {
     <BrowserRouter>
         <Routes>
             <Route path='/' element={ <Nav/> } >
-              <Route index element={ <div> <Offer/>  <FeedbackPage/> <Footer/> </div> } />
+              <Route index element={ <div> <Offer/> <TripSection/> <FeedbackPage/> <Footer/> </div> } />
               <Route path="/offer/:id" element={<OfferDetails />} />
               <Route path="/trip-details/:id" element={<TripDetails />} />
               <Route path='/cargo' element={<Cargo/>} />
