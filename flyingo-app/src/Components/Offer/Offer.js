@@ -17,7 +17,7 @@ function Offer() {
 
   return (
     <div className="w-full">
-      <div className="text-center py-10 text-2xl font-bold">Offers For You</div>
+      <div className="text-center pt-32 pb-10 text-4xl font-bold">Offers For You</div>
 
       <div className="grid grid-rows-1 mx-auto bg-fuchsia-950">
         <div className="flex justify-end pt-3">

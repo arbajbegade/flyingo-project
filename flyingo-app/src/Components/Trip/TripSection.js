@@ -6,19 +6,16 @@ import { Link } from "react-router-dom";
 function TripSection() {
   return (
     <div>
-      <div className="text-center py-10 text-2xl font-bold">
+      <div className="text-center pt-32 pb-10 text-4xl font-bold">
         Flight Deals From India
       </div>
 
       <div>
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {tripList.map((trip) => (
             <li
               key={trip.id}
-              className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow"
+              className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow list-none"
             >
               <Link to={"/trip-details/" + trip.id}>
                 <Trip trip={trip} />
