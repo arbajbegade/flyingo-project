@@ -48,7 +48,7 @@ const FeedbackForm = ({ onSubmit, onRate }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 border rounded-lg shadow">
+    <div className="max-w-md mx-auto p-6 border rounded-lg shadow " >
       {errorMessage && <p className="text-red-500 mb-2">{errorMessage}</p>}
 
       <div className="mt-4">

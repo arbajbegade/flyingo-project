@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 
 import SubscriptionForm from "./SubscriptionForm";
-import Subscribebtn from "./Subscribebtn";
+
 
 function Contact() {
   return (
@@ -13,14 +13,14 @@ function Contact() {
         <label className="justify-items-center items-center font-semibold pb-4 font4 text-3xl text-pink-950">
           Never miss an offer
         </label>
-        <label className="flex text-xl font4 font-medium text-pink-950">
+        <label className="flex text-xl font-semibold font6  text-pink-950">
           Subscribe and be the first receive our exclusive offers.
         </label>
       </div>
 
       <div>
         <SubscriptionForm />
-        <Subscribebtn/>
+        
       </div>
     </div>
   );

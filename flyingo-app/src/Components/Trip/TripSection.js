@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function TripSection() {
   return (
     <div>
-      <div className="text-center py-4 text-2xl font-bold">
+      <div className="text-center py-10 text-2xl font-bold">
         Flight Deals From India
       </div>
 
