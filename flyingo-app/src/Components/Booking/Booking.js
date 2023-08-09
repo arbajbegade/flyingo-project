@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useContext,useState } from 'react'
 import '../../App.css'
 import '../Css/Booking.css'
 import Book from './Book'
@@ -8,11 +7,13 @@ import { IoAirplaneSharp, IoLocationOutline } from "react-icons/io5";
 import { BiTrip } from "react-icons/bi";
 import { BsFillCalendar2Fill } from "react-icons/bs";
 import ShowFlights from './ShowFlights/ShowFlights'
+import {SelectFromContext} from './From'
 
 
 
 function Booking() {
   const [showFlights,setShowFlights] = useState()
+  const selectFrom = useContext(SelectFromContext)
   return (
       <div className='flex flex-col'>
         <div className='width  -mt-20  m-auto shadow-2xl rounded-b-2xl pb-2'>
@@ -29,6 +30,7 @@ function Booking() {
         </div>
         <div>
           {showFlights &&
+
           <ShowFlights/> }
         </div>
       </div>
