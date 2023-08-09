@@ -1,17 +1,23 @@
+
 import React from "react";
 
-function Subscribebtn() {
+function Subscribebtn({ isFormValid }) {
   const handleClick = (e) => {
-    e.preventdefault();
-    e.alert();
-  };
+    e.preventDefault();
+    if (isFormValid()) {
+      alert("Subscribed Successfully!");
+    } else {
+      alert("Please fill in all required fields.");
+    }
+  }
+
   return (
-    <div class="flex space-x-2 justify-center mt-4 mr-2 items-center">
+    <div className="flex justify-center mt-4">
       <button
-        onClick={(e) => {
-          alert("Subscribed Sucessfully !");
-        }}
-        className=" font-semibold px-7 py-4 bg-yellow-400  rounded-lg text-lg font1 effect'"> Subcsribe
+        onClick={handleClick}
+        className="bg-yellow-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-2 focus:ring focus:border-blue-300"
+      >
+        Subscribe
       </button>
     </div>
   );
