@@ -7,10 +7,10 @@ function TripDetails() {
   const flightinfo = flightDetails.find((flight) => flight.pid == id);
   const planesList = flightinfo.planesList;
 
-  const [selectedFromLocation, setSelectedFromLocation] = useState("");
   const uniqueFromLocations = [
     ...new Set(flightinfo.planesList.map((plane) => plane.from)),
   ];
+  const [selectedFromLocation, setSelectedFromLocation] = useState("");
   const filteredPlanesList = planesList.filter(
     (plane) => plane.from === selectedFromLocation
   );
