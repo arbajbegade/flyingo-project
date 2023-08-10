@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import flightDetails from "./flightList";
 
 function TripDetails() {
   const { id } = useParams(); // Get the item id from the URL params
   const flightinfo = flightDetails.find((flight) => flight.pid == id);
-  console.log(flightinfo.planesList);
+  const planesList = flightinfo.planesList;
+
+  const [selectedFromLocation, setSelectedFromLocation] = useState("");
+  const uniqueFromLocations = [
+    ...new Set(flightinfo.planesList.map((plane) => plane.from)),
+  ];
+  const filteredPlanesList = planesList.filter(
+    (plane) => plane.from === selectedFromLocation
+  );
 
   return (
     <>
+      <div className="">
+        <label className="inline-flex  justify-center gap-x-1.5 rounded-lg bg-white px-3 py-2 ring-1 ring-inset">
+          From:
+          <select
+            name="from"
+            id="from"
+            onChange={(e) => setSelectedFromLocation(e.target.value)}
+          >
+            <option value="">Select</option>
+            {uniqueFromLocations.map((f, index) => (
+              <option key={index} value={f}>
+                {f}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="mt-8 flow-root">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -62,7 +88,7 @@ function TripDetails() {
                 </thead>
 
                 <tbody className="">
-                  {flightinfo.planesList.map((p, index) => (
+                  {filteredPlanesList.map((p, index) => (
                     <tr
                       key={p.id}
                       className={index % 2 === 0 ? undefined : "bg-yellow-200"}
