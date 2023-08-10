@@ -18,20 +18,23 @@ function TripDetails() {
   return (
     <>
       <div className="">
-        <label className="inline-flex  justify-center gap-x-1.5 rounded-lg bg-white px-3 py-2 ring-1 ring-inset">
-          From:
-          <select
-            name="from"
-            id="from"
-            onChange={(e) => setSelectedFromLocation(e.target.value)}
-          >
-            <option value="">Select</option>
-            {uniqueFromLocations.map((f, index) => (
-              <option key={index} value={f}>
-                {f}
+        <label className="block font-medium leading-6 text-gray-900">
+          Select From:
+          <div className="relative mt-2">
+            <select
+              className="relative cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
+              onChange={(e) => setSelectedFromLocation(e.target.value)}
+            >
+              <option className="text-gray-500" value="">
+                Select
               </option>
-            ))}
-          </select>
+              {uniqueFromLocations.map((f, index) => (
+                <option key={index} value={f}>
+                  {f}
+                </option>
+              ))}
+            </select>
+          </div>
         </label>
       </div>
 
