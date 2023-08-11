@@ -8,6 +8,8 @@ function TripDetails() {
   const planesList = flightinfo.planesList;
 
   const uniqueFromLocations = [
+    // ... spread operator used to convert the Set back into an array.
+    // Set is built-in object in js which stores unique value
     ...new Set(flightinfo.planesList.map((plane) => plane.from)),
   ];
   const [selectedFromLocation, setSelectedFromLocation] = useState("");
