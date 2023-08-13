@@ -11,6 +11,7 @@ import OfferDetails from '../Components/Offer/OfferDetails'
 import Help from '../Components/Help/Help'
 import TripDetails from '../Components/Trip/TripDetails'
 import TripSection from '../Components/Trip/TripSection'
+import About from '../Components/About/About'
 
 
 function RoutNavbar() {
@@ -23,8 +24,10 @@ function RoutNavbar() {
               <Route path="/trip-details/:id" element={<TripDetails />} />
               <Route path='/cargo' element={<Cargo/>} />
             </Route>
+            
             <Route path='/booknow' element={ <BookNow/> } />
             <Route path='/contact' element={ <Contact/> } />
+            <Route path='/about' element={ <About/> } />
             <Route path='/help' element={ <Help/> } />
         </Routes>
     </BrowserRouter>
