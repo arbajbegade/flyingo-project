@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "I need to change/cancel my reservation",
     answer:
-      "To change or cancel your booking, we recommend you to contact the booking site directly. In case you don’t know the name of the booking site, you can check the booking confirmation email that you received.",
+      "To change or cancel your booking, we recommend you to contact the booking site directly. In case you don't know the name of the booking site, you can check the booking confirmation email that you received.",
   },
   {
     question: "I entered a wrong email address",
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: "What is the best day of the week to buy plane tickets?",
     answer:
-      "As per previous findings, the best day to book the cheapest flight tickets was Tuesday, but it’s not anymore. As more business travelers have started booking their flights during the week, the best day to buy those tickets is now Sunday. To avail more savings on flight tickets, try to book on a Sunday that is more than 21 days ahead of your trip.",
+      "As per previous findings, the best day to book the cheapest flight tickets was Tuesday, but it's not anymore. As more business travelers have started booking their flights during the week, the best day to buy those tickets is now Sunday. To avail more savings on flight tickets, try to book on a Sunday that is more than 21 days ahead of your trip.",
   },
   {
     question: "Is it cheaper to book flights at the last minute?",
