@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 
 const fromCities = [
   { id: 1, city: 'Mumbai' },
@@ -9,9 +9,8 @@ const fromCities = [
   { id: 6, city: 'Bengaluru' },
 ];
 
-export const SelectFromContext = createContext('hello')
 
-export default function From() {
+export default function From({valueFrom}) {
   const [showFrom, setShowFrom] = useState(false);
   const [cityName, setCityName] = useState('Select City');
 
@@ -22,11 +21,11 @@ export default function From() {
   const handleChange = (e) => {
     const selectedCity = e.target.value;
     setCityName(selectedCity);
+    valueFrom(selectedCity)
   };
   
 
   return (
-    <SelectFromContext.Provider value={cityName}>
         <div className='relative border-2 rounded-s-lg px-5 py-2 w-52 hover:border-gray-400' onClick={handleShowFrom}>
           <div htmlFor=""> From</div>
           <label className=''>{cityName}</label>
@@ -40,7 +39,6 @@ export default function From() {
             </ul>
           )}
         </div>
-    </SelectFromContext.Provider>
   );
 }
 

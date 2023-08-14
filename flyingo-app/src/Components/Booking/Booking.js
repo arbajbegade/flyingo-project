@@ -7,13 +7,19 @@ import { IoAirplaneSharp, IoLocationOutline } from "react-icons/io5";
 import { BiTrip } from "react-icons/bi";
 import { BsFillCalendar2Fill } from "react-icons/bs";
 import ShowFlights from './ShowFlights/ShowFlights'
-import {SelectFromContext} from './From'
 
 
 
 function Booking() {
   const [showFlights,setShowFlights] = useState()
-  const selectFrom = useContext(SelectFromContext)
+  const [from,setFrom] = useState('Kindly Select the city')
+  const [to,setTo] = useState('Kindly Select the city')
+  const valueFrom = (e) =>{
+    setFrom(e)
+  }
+  const valueTo = (e) =>{
+    setTo(e)
+  }
   return (
       <div className='flex flex-col'>
         <div className='width  -mt-20  m-auto shadow-2xl rounded-b-2xl pb-2'>
@@ -24,14 +30,14 @@ function Booking() {
                 <div className='flex items-center space-x-1'> <IoLocationOutline size={'1.4rem'} /><label>Flight Status</label></div>
             </div>
             <div className='h-48 flex flex-col justify-center bg-white pt-2'>
-              <Book ></Book>
+              <Book valueFrom={valueFrom} valueTo={valueTo} ></Book>
               <BookBtn btnname="Show Flights" showFlights={showFlights} setShowFlights={setShowFlights} ></BookBtn>
             </div>
         </div>
         <div>
           {showFlights &&
 
-          <ShowFlights/> }
+          <ShowFlights fromValue={from} toValue={to} /> }
         </div>
       </div>
   )

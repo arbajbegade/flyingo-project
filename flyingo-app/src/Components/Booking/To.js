@@ -9,7 +9,7 @@ const fromCities = [
   { id: 6, city: 'Berlin' },
 ];
 
-function From() {
+function To({valueTo}) {
   const [showFrom, setShowFrom] = useState(false);
   const [cityName, setCityName] = useState('Select Airport');
 
@@ -20,6 +20,7 @@ function From() {
   const handleChange = (e) => {
     const selectedCity = e.target.textContent;
     setCityName(selectedCity);
+    valueTo(selectedCity)
   };
 
 
@@ -43,4 +44,4 @@ function From() {
   );
 }
 
-export default From;
+export default To;
