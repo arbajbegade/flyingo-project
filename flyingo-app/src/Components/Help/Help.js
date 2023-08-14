@@ -89,15 +89,15 @@ export default function Help() {
     <div className="bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-white/10">
-          <h2 className="text-2xl font-bold leading-10 tracking-tight text-white">
+          <h2 className="text-4xl font-bold leading-10 tracking-tight text-white">
             Frequently asked questions :
           </h2>
-          <dl className="mt-10 space-y-6 divide-y divide-white/10">
+          <div className="mt-20 space-y-6 divide-y divide-white/10">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
                   <>
-                    <dt>
+                    <div>
                       <Disclosure.Button className="flex w-full items-start justify-between text-left text-white">
                         <span className="text-base font-semibold leading-7">
                           {faq.question}
@@ -116,7 +116,7 @@ export default function Help() {
                           )}
                         </span>
                       </Disclosure.Button>
-                    </dt>
+                    </div>
                     <Disclosure.Panel as="dd" className="mt-2 pr-12">
                       <p className="text-base leading-7 text-gray-300">
                         {faq.answer}
@@ -126,7 +126,7 @@ export default function Help() {
                 )}
               </Disclosure>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </div>
