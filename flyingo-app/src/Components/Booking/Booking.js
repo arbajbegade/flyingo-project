@@ -14,12 +14,18 @@ function Booking() {
   const [showFlights,setShowFlights] = useState()
   const [from,setFrom] = useState('Kindly Select the city')
   const [to,setTo] = useState('Kindly Select the city')
+  const [eDate,setEDate] = useState('s')
+
   const valueFrom = (e) =>{
     setFrom(e)
   }
   const valueTo = (e) =>{
     setTo(e)
   }
+  const valueDate = (e)=>{
+    setEDate(e)
+  }
+ console.log(eDate)
   return (
       <div className='flex flex-col'>
         <div className='width  -mt-20  m-auto shadow-2xl rounded-b-2xl pb-2'>
@@ -30,14 +36,14 @@ function Booking() {
                 <div className='flex items-center space-x-1'> <IoLocationOutline size={'1.4rem'} /><label>Flight Status</label></div>
             </div>
             <div className='h-48 flex flex-col justify-center bg-white pt-2'>
-              <Book valueFrom={valueFrom} valueTo={valueTo} ></Book>
+              <Book valueFrom={valueFrom} valueTo={valueTo} valueDate={valueDate} ></Book>
               <BookBtn btnname="Show Flights" showFlights={showFlights} setShowFlights={setShowFlights} ></BookBtn>
             </div>
         </div>
         <div>
           {showFlights &&
 
-          <ShowFlights fromValue={from} toValue={to} /> }
+          <ShowFlights fromValue={from} toValue={to} dateValue={eDate} /> }
         </div>
       </div>
   )
