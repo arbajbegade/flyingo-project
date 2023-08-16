@@ -1,88 +1,19 @@
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-const values = [
-  {
-    name: "Be world-class",
-    description:
-      "Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.",
-  },
-  {
-    name: "Share everything you know",
-    description:
-      "Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.",
-  },
-  {
-    name: "Always learning",
-    description:
-      "Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.",
-  },
-  {
-    name: "Be supportive",
-    description:
-      "Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.",
-  },
-  {
-    name: "Take responsibility",
-    description:
-      "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
-  },
-  {
-    name: "Enjoy downtime",
-    description:
-      "Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.",
-  },
-];
-const team = [
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    imageUrl:
-      " /photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-  },
-  // More people...
-];
+import React from "react";
+import values from "./values";
+import team from "./team";
 
 export default function About() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="bg-white">
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
-          className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+          className="mx-auto flex max-w-7xl items-center justify-center p-6 lg:px-8"
           aria-label="Global"
         >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">
+            About
+          </h1>
         </nav>
       </header>
 
@@ -93,7 +24,7 @@ export default function About() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                     We're changing the way people connect.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
@@ -210,15 +141,22 @@ export default function About() {
               Our values
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              impedit perferendis suscipit eaque, iste dolor cupiditate
+              blanditiis.
             </p>
           </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
             {values.map((value) => (
-              <div key={value.name}>
-                <dt className="font-semibold text-gray-900">{value.name}</dt>
-                <dd className="mt-1 text-gray-600">{value.description}</dd>
+              <div key={value.name} className="relative pl-9">
+                <dt className="inline font-semibold text-gray-900">
+                  <value.icon
+                    className="absolute left-1 top-1 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  {value.name}
+                </dt>
+                <dd className="inline text-gray-600">{value.description}</dd>
               </div>
             ))}
           </dl>
@@ -259,117 +197,3 @@ export default function About() {
     </div>
   );
 }
-
-// import React from "react";
-
-// const About = () => {
-//   return (
-//     <div className="bg-gray-100 p-8">
-//       <h2 className="text-4xl font-bold text-indigo-700 mb-8">
-//         Frequently Asked Questions
-//       </h2>
-//       <div className="faq mb-8">
-//         <h3 className="text-xl font-semibold text-gray-800 mb-2">
-//           How do I book a flight?
-//         </h3>
-//         <p className="text-gray-600">To book a flight, follow these steps...</p>
-//       </div>
-//       <div className="faq mb-8">
-//         <h3 className="text-xl font-semibold text-gray-800 mb-2">
-//           What is the baggage policy?
-//         </h3>
-//         <p className="text-gray-600">
-//           Our baggage policy includes details about...
-//         </p>
-//       </div>
-//       {/* Add more FAQs here */}
-
-//       <h2 className="text-4xl font-bold text-indigo-700 mb-8">
-//         Contact Information
-//       </h2>
-//       <p className="text-gray-600 mb-4">
-//         If you need assistance, feel free to contact us:
-//       </p>
-//       <ul className="list-disc pl-6 mb-8">
-//         <li className="text-gray-700">
-//           Email:{" "}
-//           <a
-//             href="mailto:support@example.com"
-//             className="text-blue-500 hover:underline"
-//           >
-//             support@example.com
-//           </a>
-//         </li>
-//         <li className="text-gray-700">Phone: 123-456-7890</li>
-//       </ul>
-
-//       {/* Add more contact information here */}
-
-//       {/* Include other sections as mentioned in the previous response */}
-//     </div>
-//   );
-// };
-
-// export default About;
-
-// import React from "react";
-
-// const About = () => {
-//   return (
-//     <div className="bg-gray-100 p-8">
-//       <h2 className="text-4xl font-bold text-indigo-700 mb-8">
-//         kadncnl lnnmilasjdisj
-//       </h2>
-//       <div className="faq mb-8">
-//         <h3 className="text-xl font-semibold text-gray-800 mb-2">
-//           admflksmdklsam kdmoasmdo
-//         </h3>
-//         <p className="text-gray-600">follow these steps...</p>
-//       </div>
-//       <div className="faq mb-8">
-//         <h3 className="text-xl font-semibold text-gray-800 mb-2">
-//           What is the policy?
-//         </h3>
-//         <p className="text-gray-600">
-//           Our baggage policy includes details about...
-//         </p>
-//       </div>
-
-//       <h2 className="text-4xl font-bold text-indigo-700 mb-8">
-//         Contact Information
-//       </h2>
-//       <p className="text-gray-600 mb-4">
-//         If you need assistance, feel free to contact us:
-//       </p>
-//       <ul className="list-disc pl-6 mb-8">
-//         <li className="text-gray-700">
-//           Email:{" "}
-//           <a
-//             href="mailto:support@example.com"
-//             className="text-blue-500 hover:underline"
-//           >
-//             support@example.com
-//           </a>
-//         </li>
-//         <li className="text-gray-700">Phone: 123-456-7890</li>
-//       </ul>
-
-//       <h2 className="text-4xl font-bold text-indigo-700 mb-8">
-//         Booking Changes and Cancellations
-//       </h2>
-//       <p className="text-gray-600 mb-4">
-//         Learn about our booking modification and cancellation policies:
-//       </p>
-//       <ul className="list-disc pl-6 mb-8">
-//         <li className="text-gray-700">
-//           For changing a booking, visit your account dashboard.
-//         </li>
-//         <li className="text-gray-700">
-//           To cancel a booking, contact our customer support.
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default About;
