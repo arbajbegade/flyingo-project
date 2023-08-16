@@ -15,7 +15,7 @@ function Navlist() {
   return (
         <ol className='flex space-x-14 font1'>
           <li><NavLink to="/">home</NavLink></li>
-          <li><NavLink to='/explore' >Explore</NavLink></li>
+          <li><NavLink to='/club' >Club</NavLink></li>
           <li><NavLink to='/cargo' >Cargo</NavLink></li>
         </ol>
   )

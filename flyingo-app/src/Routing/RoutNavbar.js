@@ -12,6 +12,7 @@ import Help from '../Components/Help/Help'
 import TripDetails from '../Components/Trip/TripDetails'
 import TripSection from '../Components/Trip/TripSection'
 import About from '../Components/About/About'
+import PrivilegeClub from '../Components/Club/PrivilegeClub'
 
 
 function RoutNavbar() {
@@ -21,6 +22,7 @@ function RoutNavbar() {
             <Route path='/' element={ <Nav/> } >
               <Route index element={ <div> <Offer/> <TripSection/> <FeedbackPage/> <Footer/> </div> } />
               <Route path="/offer/:id" element={<OfferDetails />} />
+              <Route path="/club" element={<PrivilegeClub/>} />
               <Route path="/trip-details/:id" element={<TripDetails />} />
               <Route path='/cargo' element={<Cargo/>} />
             </Route>
