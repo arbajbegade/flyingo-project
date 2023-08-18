@@ -13,7 +13,7 @@ function ChildTicket({passenger,setPassenger}) {
     }
   return (
         <div className="flex justify-center items-center space-x-3">
-            <div disabled={childCount === 1} onClick={handleChildeCount1} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center cursor-pointer hover:bg-yellow-300">-</div>
+            <button disabled={childCount <= 1} onClick={handleChildeCount1} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center cursor-pointer hover:bg-yellow-300">-</button>
             <div>{childCount}</div>
             <div onClick={handleChildCount} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center pt-1 cursor-pointer hover:bg-yellow-300">+</div>
          </div>
