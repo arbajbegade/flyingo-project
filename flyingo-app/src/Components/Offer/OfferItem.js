@@ -1,14 +1,19 @@
-import React from 'react'
+import React from "react";
 
-function OfferItem({img, country, city}) {
+function OfferItem({ imageUrl }) {
   return (
-    <div className='flex flex-col items-center shadow my-5 mx-10' >
-        <img src={img} alt="" className='woffer' />
-        <label className='font2 text-base '> {country} </label>
-        <label className='font1 text-xl font-semibold px-2 py-1 rounded-2xl bg-yellow-400'> {city} </label>
-        <label className='font4 text-xl mt-2 font-semibold textcolor pb-2'>Discover Your Self</label>
-    </div>
-  )
+    <>
+      <div className="card w-[300px] h-[250px] ml-7 mr-7 rounded-lg">
+        <div className="">
+          <img
+            className="w-[300px] h-[250px]"
+            src={imageUrl}
+            alt="img"
+          />
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default OfferItem
+export default OfferItem;

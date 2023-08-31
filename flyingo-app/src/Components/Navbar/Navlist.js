@@ -1,14 +1,22 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Navlist() {
 
-    const list = ['Explore','Book','Experience','Blog']
-    const listName = list.map((l)=> <li>{l}</li> )
+       const list = [
+        {id:1,name:"Home"},
+        {id:1,name:"Explore"},
+        {id:1,name:"Book"},
+        {id:1,name:"Experience"},
+       ]
+    const listName = list.map((l)=> <nav key={l.id} >{l.name}</nav> )
      
 
   return (
         <ol className='flex space-x-14 font1'>
-            {listName}
+          <li><NavLink to="/">home</NavLink></li>
+          <li><NavLink to='/club' >Club</NavLink></li>
+          <li><NavLink to='/cargo' >Cargo</NavLink></li>
         </ol>
   )
 }

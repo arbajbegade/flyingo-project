@@ -11,6 +11,7 @@ function FooterAbout({name}) {
         <ul className=' mt-5 font-extralight space-y-1'>{aboutlist}</ul>
     </div>
   )
-}
+}  
+
 
 export default FooterAbout

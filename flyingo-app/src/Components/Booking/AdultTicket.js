@@ -13,10 +13,10 @@ function AdultTicket({passenger,setPassenger}) {
       }
 
   return (
-    <div className="flex justify-center items-center space-x-3">
-       <div disabled={adultCount === 1} onClick={handleadultCount1} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center cursor-pointer hover:bg-yellow-300">-</div>
+    <div className="flex justify-center items-center space-x-3 ">
+       <button disabled={adultCount == 1} onClick={handleadultCount1} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center cursor-pointer hover:bg-yellow-300">-</button>
        <div>{adultCount}</div>
-       <div onClick={handleadultCount} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center pt-1 cursor-pointer hover:bg-yellow-300">+</div>
+       <button  disabled={adultCount == 0} onClick={handleadultCount} className="h-6 w-6 border border-gray-500 rounded text-3xl grid place-content-center pt-1 cursor-pointer hover:bg-yellow-300">+</button>
     </div>
   )
 }
